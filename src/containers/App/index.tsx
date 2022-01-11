@@ -1,22 +1,12 @@
-import styled from 'styled-components';
-import {
-  Route,
-  BrowserRouter,
-  Routes,
-} from "react-router-dom";
-import Header from '../../components/Header';
-import HomePage from '../HomePage';
-import UserPage from '../UserPage';
-import NotFoundPage from "../NotFoundPage";
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
-const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
-`;
+import Header from '../../components/Header';
+import AppWrapper from './Wrapper';
+import React from 'react';
+
+const HomePage = React.lazy(() => import('../HomePage'));
+const UserPage = React.lazy(() => import('../UserPage'));
+const NotFoundPage = React.lazy(() => import('../NotFoundPage'));
 
 export default function App() {
   return (
@@ -24,9 +14,30 @@ export default function App() {
       <Header />
       <AppWrapper>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/users/:userId" element={<UserPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route
+            path="/"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <HomePage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/users/:userId"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <UserPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <NotFoundPage />
+              </React.Suspense>
+            }
+          />
         </Routes>
       </AppWrapper>
     </BrowserRouter>

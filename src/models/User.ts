@@ -25,3 +25,7 @@ export interface UserItem {
   site_admin: true;
   score: number;
 }
+
+export interface UserDetails {
+  id: number;
+}

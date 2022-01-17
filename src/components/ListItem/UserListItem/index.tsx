@@ -1,7 +1,7 @@
 import { UserItem } from '../../../models/User';
 import Avatar from '../../Avatar';
 import Description from '../Description';
-import Footer from '../Footer';
+import Footer from '../../Footer';
 import TextContent from '../TextContent';
 import Wrapper from '../Wrapper';
 import Label from './Label';

@@ -1,5 +1,5 @@
-import ItemFooterValue from '../../ItemFooterValue';
-import ItemFooterWrapper from '../../ItemFooterWrapper';
+import ItemFooterValue from '../../Footer/Value';
+import ItemFooterWrapper from '../../Footer/Wrapper';
 
 function Location(props: { value: string }) {
   return (

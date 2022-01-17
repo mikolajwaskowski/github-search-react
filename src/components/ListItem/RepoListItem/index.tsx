@@ -1,6 +1,5 @@
 import { RepositoryItem } from '../../../models/Repository';
 import Description from '../Description';
-import Footer from '../Footer';
 import Name from './Name';
 import TextContent from '../TextContent';
 import UpdatedAt from './UpdatedAt';
@@ -10,6 +9,7 @@ import Issues from './Issues';
 import Language from './Language';
 import License from './License';
 import Stars from './Stars';
+import Footer from '../../Footer';
 
 function RepoListItem(props: { item: RepositoryItem }) {
   return (

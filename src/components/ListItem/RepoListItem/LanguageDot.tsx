@@ -6,6 +6,7 @@ const BasicDot = styled.i`
   height: 0.7rem;
   border-radius: 100%;
   background: ${(props) => props.color || '#dadada'};
+  margin-right: 0.18rem;
 `;
 
 const colors: { [key: string]: string } = {

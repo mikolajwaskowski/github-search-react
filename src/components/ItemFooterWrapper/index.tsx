@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   display: flex;
-  justify-content: space-between;
-  background-color: #24292f;
-  padding: 1rem 1.2rem;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
 `;

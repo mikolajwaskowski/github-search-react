@@ -12,14 +12,12 @@ export default function HomePage() {
     { type: SearchResultType.USER, data: { id: 123 } as UserItem },
   ]);
 
-  const list = items.map((item, index) => {
-    return <ListItem item={item} key={index}></ListItem>;
-  });
-
   return (
     <main>
       <SearchResultNumber value={searchResults} />
-      {list}
+      {items.map((item, index) => (
+        <ListItem item={item} key={index}></ListItem>
+      ))}
     </main>
   );
 }

@@ -1,6 +1,6 @@
-import ItemFooterValue from '../ItemFooterValue';
-import ItemFooterWrapper from '../ItemFooterWrapper';
-import StarIcon from '../StarIcon';
+import ItemFooterValue from '../../ItemFooterValue';
+import ItemFooterWrapper from '../../ItemFooterWrapper';
+import StarIcon from '../../StarIcon';
 
 function Stars(props: { value: number }) {
   return (

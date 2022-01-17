@@ -1,8 +1,8 @@
-import Img from '../Img';
+import Img from '../../Img';
 import icon from './icon.svg';
 
-function RepoIcon() {
+function Icon() {
   return <Img src={icon} alt="Repository" />;
 }
 
-export default RepoIcon;
+export default Icon;

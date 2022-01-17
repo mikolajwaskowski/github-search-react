@@ -1,5 +1,5 @@
-import ItemFooterValue from '../ItemFooterValue';
-import ItemFooterWrapper from '../ItemFooterWrapper';
+import ItemFooterValue from '../../ItemFooterValue';
+import ItemFooterWrapper from '../../ItemFooterWrapper';
 
 function Issues(props: { value: number }) {
   return (

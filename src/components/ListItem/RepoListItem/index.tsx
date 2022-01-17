@@ -1,24 +1,22 @@
-import Wrapper from './Wrapper';
-import { RepositoryItem } from '../../models/Repository';
-import Icon from './Icon';
-import TextContent from './TextContent';
+import { RepositoryItem } from '../../../models/Repository';
+import Description from '../Description';
+import Footer from '../Footer';
 import Name from './Name';
-import Description from './Description';
-import Footer from './Footer';
-import Stars from './Stars';
+import TextContent from '../TextContent';
+import UpdatedAt from './UpdatedAt';
+import Wrapper from '../Wrapper';
+import Icon from './Icon';
+import Issues from './Issues';
 import Language from './Language';
 import License from './License';
-import UpdatedAt from './UpdatedAt';
-import Issues from './Issues';
+import Stars from './Stars';
 
 function RepoListItem(props: { item: RepositoryItem }) {
   return (
     <Wrapper>
       <Icon />
       <TextContent>
-        <Name href={'url'} target="_blank">
-          {'name'}
-        </Name>
+        <Name url={'url'} name={'name'} />
         <Description>{'description'}</Description>
         <Footer>
           <Stars value={123} />

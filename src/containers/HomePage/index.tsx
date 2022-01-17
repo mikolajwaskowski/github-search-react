@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import RepoListItem from '../../components/RepoListItem';
+import ListItem from '../../components/ListItem';
 import SearchResultNumber from '../../components/SearchResultNumber';
-import UserListItem from '../../components/UserListItem';
 import { RepositoryItem } from '../../models/Repository';
 import { SearchResult, SearchResultType } from '../../models/SearchResult';
 import { UserItem } from '../../models/User';
@@ -13,25 +12,8 @@ export default function HomePage() {
     { type: SearchResultType.USER, data: { id: 123 } as UserItem },
   ]);
 
-  const list = items.map((item) => {
-    switch (item.type) {
-      case SearchResultType.REPOSITORY:
-        return (
-          <RepoListItem
-            item={item.data as RepositoryItem}
-            key={'r' + item.data.id}
-          ></RepoListItem>
-        );
-      case SearchResultType.USER:
-        return (
-          <UserListItem
-            item={item.data as UserItem}
-            key={'u' + item.data.id}
-          ></UserListItem>
-        );
-      default:
-        return <></>;
-    }
+  const list = items.map((item, index) => {
+    return <ListItem item={item} key={index}></ListItem>;
   });
 
   return (

@@ -1,5 +1,5 @@
-import ItemFooterValue from '../ItemFooterValue';
-import ItemFooterWrapper from '../ItemFooterWrapper';
+import ItemFooterValue from '../../ItemFooterValue';
+import ItemFooterWrapper from '../../ItemFooterWrapper';
 import { timeAgo } from './time-ago';
 
 function UpdatedAt(props: { value: string }) {

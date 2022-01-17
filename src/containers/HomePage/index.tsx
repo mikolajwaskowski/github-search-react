@@ -12,6 +12,8 @@ export default function HomePage() {
     { type: SearchResultType.USER, data: { id: 123 } as UserItem },
   ]);
 
+  // @todo: sorting
+
   return (
     <main>
       <SearchResultNumber value={searchResults} />

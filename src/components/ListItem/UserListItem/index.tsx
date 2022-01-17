@@ -1,9 +1,9 @@
 import { UserItem } from '../../../models/User';
+import Avatar from '../../Avatar';
 import Description from '../Description';
 import Footer from '../Footer';
 import TextContent from '../TextContent';
 import Wrapper from '../Wrapper';
-import Avatar from './Avatar';
 import Label from './Label';
 import Location from './Location';
 import Name from './Name';
@@ -14,6 +14,7 @@ function UserListItem(props: { item?: UserItem }) {
       <Avatar
         url={'url'}
         src={'https://eu.ui-avatars.com/api/?background=0D8ABC&color=fff'}
+        size={'xs'}
       />
       <TextContent>
         <Name url={'url'} name={'Michał Muskała'} />
